@@ -1,14 +1,3 @@
-/*
-1. Book object constructor
-2. Add function to add book objects to array
-3. Add array to store all book objects
-4. Add a function that loops through the array and displays each book on the page
-5. Add New Book button with a form
-6. Add a remove button
-7. Add button to change read status
-8. use web storage API for persistance to refreshing
-*/
-
 //--------------------------------------------------------------------------
 //--------------------------------------------------------------------------
 
@@ -76,12 +65,19 @@ function addBookToLibrary(book) {
 
 function addBookToUI (book) {
     let bookNode = document.createElement('div');
-    bookNode.style.border = '1px solid black';
     let title = document.createElement('h2');
     let author = document.createElement('h3');
     let read = document.createElement('h3');
     let remove = document.createElement('button');
-    
+
+    bookNode.classList.add('theBook');
+    title.classList.add('bookInfo');
+    title.style.color = '#d2d2d3';
+    author.classList.add('bookInfo');
+    read.classList.add('bookInfo');
+    remove.classList.add('removeButton','removeButton:hover');
+
+
     title.textContent = book.title;
     author.textContent = book.author;
     if(book.read === 'true'){
@@ -90,7 +86,7 @@ function addBookToUI (book) {
     else {
         read.textContent = "Book not read";
     }
-    remove.textContent = 'remove book';
+    remove.textContent = 'Remove Book';
 
     libraryBody.appendChild(bookNode);
     bookNode.appendChild(title);

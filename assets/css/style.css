@@ -15,6 +15,10 @@
     align-items:center;
 }
 
+body {
+    background-color: #2f3137;
+}
+
 h1 {
     text-align: center;
     padding: 0.5em;
@@ -31,6 +35,7 @@ h1 {
     background-color: #383b42;
     color: #787e85;
     flex-wrap: wrap;
+    margin-bottom: 3em;
 }
 
 .formRow {
@@ -64,7 +69,7 @@ h1 {
     font-size: 14px;            
   }
 
-  .formRow button {
+.formRow button {
     align-self: center;
     font-size: 16px;
     font-weight: bold;
@@ -76,4 +81,54 @@ h1 {
     color: #d2d2d3;
     background-color: #2f3137;
     margin-top: 1.5em;
-  }
+}
+
+.formRow button:hover {
+    background-color: #787e85;
+    cursor: pointer;
+}
+
+.formRow button:active {
+    background-color: #2f3137;
+}
+
+.theBook {
+    display:flex;
+    border-radius: 10px;
+    padding: 1em .5em;
+    margin: 1em .5em 3em .5em;
+    background-color: #383b42;
+    color: #787e85;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+}
+
+.bookInfo {
+    line-height: 1.3;
+    margin-bottom: 10px;
+    width: 85vw;
+}
+
+.removeButton {
+    align-self: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 45vw;
+    padding: .5em 1.5em;
+    color: #d2d2d3;
+    background-color: #2f3137;
+    margin-top: 1.5em;
+}
+
+.removeButton:hover {
+    background-color: #787e85;
+    cursor: pointer;
+}
+
+.removeButton:active {
+    background-color: #2f3137;
+}
