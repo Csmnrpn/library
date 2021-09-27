@@ -4,6 +4,76 @@
     box-sizing: border-box;
 }
 
-h1 {
-    color: blue;
+.mainContent {
+    display:flex;
+    flex-direction: column;
+    padding: 3%;
+    background-color: #2f3137;
+    color: #d2d2d3;
+    font-size: 16px;
+    line-height: 1.3;
+    align-items:center;
 }
+
+h1 {
+    text-align: center;
+    padding: 0.5em;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.addBookForm {
+    display:flex;
+    border: 1px solid #383b42;
+    border-radius: 10px;
+    padding: .5em;
+    margin: .5em;
+    background-color: #383b42;
+    color: #787e85;
+    flex-wrap: wrap;
+}
+
+.formRow {
+    display:flex;
+    flex-direction: column;
+    width: 85vw;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.formRow input[type='text'] {
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    padding: 7px;
+    width: 100%;
+    font-size: 14px;
+    background-color: #787e85;
+    color: #e3e3e7;
+}
+
+.formRow label {
+    margin-bottom: 4px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.formRow select {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;            
+  }
+
+  .formRow button {
+    align-self: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 40vw;
+    padding: .5em 1.5em;
+    color: #d2d2d3;
+    background-color: #2f3137;
+    margin-top: 1.5em;
+  }
