@@ -72,7 +72,7 @@ function addBookToUI (book) {
 
     bookNode.classList.add('theBook');
     title.classList.add('bookInfo');
-    title.style.color = '#d2d2d3';
+    title.style.color = '#382110';
     author.classList.add('bookInfo');
     read.classList.add('bookInfo');
     remove.classList.add('removeButton','removeButton:hover');
