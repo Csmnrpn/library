@@ -67,24 +67,27 @@ function addBookToUI (book) {
     let bookNode = document.createElement('div');
     let title = document.createElement('h2');
     let author = document.createElement('h3');
-    let read = document.createElement('h3');
+    let read = document.createElement('button');
     let remove = document.createElement('button');
 
     bookNode.classList.add('theBook');
     title.classList.add('bookInfo');
     title.style.color = '#382110';
     author.classList.add('bookInfo');
-    read.classList.add('bookInfo');
+    author.style.marginBottom = '80px';
+    read.classList.add('removeButton', 'removeButton:hover');
     remove.classList.add('removeButton','removeButton:hover');
 
 
     title.textContent = book.title;
     author.textContent = book.author;
     if(book.read === 'true'){
-        read.textContent = "Book read";
+        read.textContent = "Read";
+        read.style.backgroundColor = '#10451d';
     }
     else {
-        read.textContent = "Book not read";
+        read.textContent = "Not read";
+        read.style.backgroundColor = '#780000';
     }
     remove.textContent = 'Remove Book';
 
@@ -95,11 +98,13 @@ function addBookToUI (book) {
     bookNode.appendChild(remove);
     
     read.addEventListener('click', function(){
-        if(read.textContent === 'Book read') {
-            read.textContent = 'Book not read';
+        if(read.textContent === 'Read') {
+            read.textContent = 'Not read';
+            read.style.backgroundColor = '#780000';
         }
         else {
-            read.textContent = 'Book read';
+            read.textContent = 'Read';
+            read.style.backgroundColor = '#10451d';
         }
         book.readingStatus();
         localStorage.setItem('library', JSON.stringify(library));
